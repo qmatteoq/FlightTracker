@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package
+   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities">
+  <Identity Name="DesktopBridge.FlightTracker"
+    ProcessorArchitecture="x86"
+    Version="1.0.0.0"
+    Publisher="CN=TheAppvengers" />
+  <Properties>
+    <DisplayName>Flight Tracker</DisplayName>
+    <PublisherDisplayName>The Appvengers</PublisherDisplayName>
+    <Description>Flight Tracker</Description>
+    <Logo>Assets/logo.png</Logo>
+  </Properties>
+  <Resources>
+    <Resource Language="en-us" />
+  </Resources>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.0" MaxVersionTested="10.0.14393.0" />
+  </Dependencies>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust"/>
+  </Capabilities>
+  <Applications>
+    <Application Id="App" Executable="DesktopBridge.FlightTracker.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements
+        BackgroundColor="transparent"
+        DisplayName="Flight Tracker"
+        Square150x150Logo="Assets/Square150x150Logo.png"
+        Square44x44Logo="Assets/Square44x44Logo.png"
+        Description="Flight Tracker" />
+      <Extensions>
+        <Extension Category="windows.backgroundTasks" EntryPoint="DesktopBridge.FlightTracker.Notification.ToastTask">
+          <BackgroundTasks>
+            <Task Type="systemEvent" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+
+  <Extensions>
+    <Extension Category="windows.activatableClass.inProcessServer">
+      <InProcessServer>
+        <Path>CLRHost.dll</Path>
+        <ActivatableClass ActivatableClassId="DesktopBridge.FlightTracker.Notification.ToastTask" ThreadingModel="both" />
+      </InProcessServer>
+    </Extension>
+  </Extensions>
+
+</Package>
