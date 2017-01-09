@@ -1,0 +1,4 @@
+Snippet 4.9.1
+
+xcopy /y /s "$(SolutionDir)DesktopBridge.FlightTracker.Export\bin\$(ConfigurationName)\DesktopBridge.FlightTracker.Export.exe" "$(SolutionDir)DesktopBridge.FlightTracker\bin\x64\$(ConfigurationName)\AppX\"
+xcopy /y /s "$(SolutionDir)DesktopBridge.FlightTracker.Export\bin\$(ConfigurationName)\DesktopBridge.FlightTracker.Export.exe" "$(SolutionDir)DesktopBridge.FlightTracker\bin\x86\$(ConfigurationName)\AppX\"

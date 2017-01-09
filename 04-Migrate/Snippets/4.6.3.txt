@@ -1,0 +1,10 @@
+Snippet 4.6.3
+
+static void Main(string[] args)
+{
+    //we use an AutoResetEvent to keep to process alive until the communication channel established by the App Service is open
+    appServiceExit = new AutoResetEvent(false);
+    Thread appServiceThread = new Thread(new ThreadStart(ThreadProc));
+    appServiceThread.Start();
+    appServiceExit.WaitOne();
+}

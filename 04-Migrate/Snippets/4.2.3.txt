@@ -1,0 +1,7 @@
+Snippet 4.2.3
+
+private async void OnShowAbout(object sender, RoutedEventArgs e)
+{
+    AboutPage aboutPage = new AboutPage();
+    await aboutPage.ShowAsync();
+}

@@ -1,0 +1,6 @@
+Snippet 4.8.3
+
+<Capabilities>
+  <Capability Name="internetClient" />
+  <rescap:Capability Name="runFullTrust" />
+</Capabilities>

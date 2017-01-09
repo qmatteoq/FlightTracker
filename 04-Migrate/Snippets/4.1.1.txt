@@ -1,0 +1,20 @@
+Snippet 4.1.1
+
+<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    HorizontalAlignment="Center" VerticalAlignment="Top">
+    <StackPanel>
+        <TextBlock Text="FlightTracker" Style="{StaticResource HeaderTextBlockStyle}" Margin="0, 0, 0, 30" />
+        <TextBox x:Name="codeTextbox" Header="Flight code" />
+        <TextBox x:Name="dateTextbox" Header="Flight date" />
+        <TextBox x:Name="departureTextbox" Header="Flight departure city" />
+        <TextBox x:Name="arrivalTextbox" Header="Flight arrival city" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0, 20, 0, 20">
+            <Button Content="Save" Click="OnSaveFlight" />
+            <Button Content="Export" Click="OnExportBoardingPass" Margin="5, 0, 0, 0" 
+Visibility="Collapsed" />
+        </StackPanel>
+        <TextBlock x:Name="operationStatusLabel" Style="{StaticResource SubtitleTextBlockStyle}" />
+        <ProgressRing Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"
+                Width="50" Height="50" x:Name="progressBar" />
+    </StackPanel>
+</Grid>

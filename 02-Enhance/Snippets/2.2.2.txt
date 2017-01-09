@@ -1,0 +1,19 @@
+Snippet 2.2.2
+
+private void ShowNotification()
+{
+    string xml = $@"<toast>
+        <visual>
+            <binding template='ToastGeneric'>
+                <text>Flight Tracker</text>
+                <text>The boarding pass for flight {codeTextbox.Text} from {departureTextbox.Text} to {arrivalTextbox.Text} has been exported on your desktop</text>
+            </binding>
+        </visual>
+    </toast>";
+
+    XmlDocument doc = new XmlDocument();
+    doc.LoadXml(xml);
+
+    ToastNotification toast = new ToastNotification(doc);
+    ToastNotificationManager.CreateToastNotifier().Show(toast);
+}

@@ -1,0 +1,4 @@
+Snippet 4.6.1
+
+static AppServiceConnection connection = null;
+static AutoResetEvent appServiceExit;

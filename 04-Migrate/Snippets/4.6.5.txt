@@ -1,0 +1,3 @@
+Snippet 4.6.5
+
+using Windows.Foundation.Collections;

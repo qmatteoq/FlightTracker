@@ -1,0 +1,22 @@
+Snippet 3.5.5
+
+public void Run(IBackgroundTaskInstance taskInstance)
+{
+    string flightInfo = GenerateFlightInfo();
+
+    string xml = $@"<toast>
+<visual>
+    <binding template='ToastGeneric'>
+        <text>Flight Tracker</text>
+        <text>Pay attention, your time zone has changed! Make sure your flight is still in time!</text>
+        <text>{flightInfo}</text>
+    </binding>
+</visual>
+</toast>";
+
+    XmlDocument doc = new XmlDocument();
+    doc.LoadXml(xml);
+
+    ToastNotification toast = new ToastNotification(doc);
+    ToastNotificationManager.CreateToastNotifier().Show(toast);
+}

@@ -1,0 +1,9 @@
+Snippet 3.3.3
+
+<Extensions>
+  <Extension Category="windows.backgroundTasks" EntryPoint="DesktopBridge.FlightTracker.Notification.ToastTask">
+    <BackgroundTasks>
+      <Task Type="systemEvent" />
+    </BackgroundTasks>
+  </Extension>
+</Extensions>

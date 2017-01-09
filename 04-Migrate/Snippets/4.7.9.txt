@@ -1,0 +1,30 @@
+Snippet 4.7.9
+
+private async void OnExportBoardingPass(object sender, RoutedEventArgs e)
+{
+    progressBar.IsActive = true;
+    //we simulate that the exporting operation takes a while to be completed
+    await Task.Delay(5000);
+
+    //if the connection with the App Service has been established, we send the info about the flight to the Win32 process
+    if (App.Connection != null)
+    {
+        ValueSet set = new ValueSet();
+        set.Add("Code", codeTextbox.Text);
+        set.Add("Date", dateTextbox.Text);
+        set.Add("Departure", departureTextbox.Text);
+        set.Add("Arrival", arrivalTextbox.Text);
+
+        AppServiceResponse response = await App.Connection.SendMessageAsync(set);
+        //if the Win32 process has received the data and it has successfully generated the boarding pass, we show a notification to the user
+        if (response.Status == AppServiceResponseStatus.Success)
+        {
+            string status = response.Message["Status"].ToString();
+            if (status == "Success")
+            {
+                ShowNotification();
+            }
+        }
+    }
+    progressBar.IsActive = false;
+}

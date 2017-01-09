@@ -1,0 +1,18 @@
+Snippet 4.6.6
+
+private static async void Connection_RequestReceived(AppServiceConnection sender, AppServiceRequestReceivedEventArgs args)
+{
+    //we receive the data about the flight from the UWP app and we generate the boarding pass on the desktop
+    string flightCode = args.Request.Message["Code"].ToString();
+    string flightDate = args.Request.Message["Date"].ToString();
+    string departureCity = args.Request.Message["Departure"].ToString();
+    string arrivalCity = args.Request.Message["Arrival"].ToString();
+
+    GenerateBoardingPass(flightCode, flightDate, departureCity, arrivalCity);
+
+    //we send a message back to the UWP app to communicate that the operation has been completed with success
+    ValueSet set = new ValueSet();
+    set.Add("Status", "Success");
+
+    await args.Request.SendResponseAsync(set);
+}

@@ -1,0 +1,7 @@
+Snippet 4.7.6
+
+public MainPage()
+{
+    this.InitializeComponent();
+    (Application.Current as App).StatusUpdated += MainPage_StatusUpdated;
+}

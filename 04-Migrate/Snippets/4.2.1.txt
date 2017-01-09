@@ -1,0 +1,9 @@
+Snippet 4.2.1
+
+<Page.BottomAppBar>
+    <CommandBar>
+        <CommandBar.PrimaryCommands>
+            <AppBarButton Label="About" Icon="Help" Click="OnShowAbout" />
+        </CommandBar.PrimaryCommands>
+    </CommandBar>
+</Page.BottomAppBar>
