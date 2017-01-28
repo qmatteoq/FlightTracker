@@ -1,0 +1,4 @@
+Snippet 4.7.1
+
+using Windows.ApplicationModel.AppService;
+using Windows.ApplicationModel.Background;

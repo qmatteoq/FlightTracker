@@ -1,0 +1,13 @@
+Snippet 4.8.2
+
+<Extensions>
+  <uap:Extension Category="windows.appService">
+    <uap:AppService Name="BoardingPassService" />
+  </uap:Extension>
+  <Extension Category="windows.backgroundTasks" EntryPoint="DesktopBridge.FlightTracker.Notification.ToastTask">
+    <BackgroundTasks>
+      <Task Type="systemEvent" />
+    </BackgroundTasks>
+  </Extension>
+  <desktop:Extension Category="windows.fullTrustProcess" Executable="DesktopBridge.FlightTracker.Export.exe" />
+</Extensions>

@@ -1,0 +1,5 @@
+Snippet 2.5.1
+
+<LayoutFile Include="$(MyProjectOutputPath)\DesktopUWP\DesktopBridge.Helpers.dll">
+  <PackagePath>$(PackageLayout)\DesktopBridge.Helpers.dll</PackagePath>
+</LayoutFile>

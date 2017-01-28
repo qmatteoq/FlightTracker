@@ -1,0 +1,10 @@
+Snippet 3.3.4
+
+<Extensions>
+  <Extension Category="windows.activatableClass.inProcessServer">
+    <InProcessServer>
+      <Path>CLRHost.dll</Path>
+      <ActivatableClass ActivatableClassId=" DesktopBridge.FlightTracker.Notification.ToastTask" ThreadingModel="both" />
+    </InProcessServer>
+  </Extension>
+</Extensions>

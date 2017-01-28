@@ -1,0 +1,5 @@
+Snippet 4.7.2
+
+public event EventHandler<string> StatusUpdated;
+public static AppServiceConnection Connection = null;
+private BackgroundTaskDeferral appServiceDeferral = null;

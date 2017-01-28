@@ -1,0 +1,11 @@
+Snippet 3.5.2
+
+private void saveButton_Click(object sender, EventArgs e)
+{
+    ApplicationData.Current.LocalSettings.Values["Code"] = codeTextbox.Text;
+    ApplicationData.Current.LocalSettings.Values["Date"] = dateTextbox.Text;
+    ApplicationData.Current.LocalSettings.Values["Departure"] = departureTextbox.Text;
+    ApplicationData.Current.LocalSettings.Values["Arrival"] = arrivalTextbox.Text;
+
+    operationStatusLabel.Text = "The flight has been saved";
+}

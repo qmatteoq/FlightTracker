@@ -1,0 +1,19 @@
+Snippet 3.2.1
+
+string triggerName = "FlightTimeZoneTrigger";
+
+// Check if the task is already registered
+foreach (var cur in BackgroundTaskRegistration.AllTasks)
+{
+    if (cur.Value.Name == triggerName)
+    {
+        // The task is already registered.
+        return;
+    }
+}
+
+BackgroundTaskBuilder builder = new BackgroundTaskBuilder();
+builder.Name = triggerName;
+builder.SetTrigger(new SystemTrigger(SystemTriggerType.TimeZoneChange, false));
+builder.TaskEntryPoint ="DesktopBridge.FlightTracker.Notification.ToastTask";
+builder.Register();

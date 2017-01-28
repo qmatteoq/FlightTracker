@@ -1,0 +1,11 @@
+Snippet 4.7.4
+
+private void Connection_RequestReceived(AppServiceConnection sender, AppServiceRequestReceivedEventArgs args)
+{
+    //the Win32 app has sent us a message. If it's the message to confirm that the channel has been open, we raise the StatusUpdated event
+    if (args.Request.Message.ContainsKey("Status"))
+    {
+        string currentStatus = args.Request.Message["Status"].ToString();
+        StatusUpdated?.Invoke(this, currentStatus);
+    }
+}

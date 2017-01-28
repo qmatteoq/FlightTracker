@@ -1,0 +1,13 @@
+Snippet 1.5.1
+
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MyProjectOutputPath>$(PackageLayout)\..\..\DesktopBridge.FlightTracker\bin</MyProjectOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <LayoutFile Include="$(MyProjectOutputPath)\Debug\DesktopBridge.FlightTracker.exe">
+      <PackagePath>$(PackageLayout)\DesktopBridge.FlightTracker.exe</PackagePath>
+    </LayoutFile>
+  </ItemGroup>
+</Project>

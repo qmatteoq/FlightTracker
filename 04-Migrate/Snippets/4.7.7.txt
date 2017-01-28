@@ -1,0 +1,10 @@
+Snippet 4.7.7
+
+private async void MainPage_StatusUpdated(object sender, string e)
+{
+    //the Win32 app has initialized the channel with the App Service, so we hide the ProgressRing
+    await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+    {
+        progressBar.IsActive = false;
+    });
+}

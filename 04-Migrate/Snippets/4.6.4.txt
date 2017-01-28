@@ -1,0 +1,27 @@
+Snippet 4.6.4
+
+static async void ThreadProc()
+{
+    //we create a connection with the App Service defined by the UWP app
+    connection = new AppServiceConnection();
+    connection.AppServiceName = "BoardingPassService";
+    connection.PackageFamilyName = Windows.ApplicationModel.Package.Current.Id.FamilyName;
+    connection.RequestReceived += Connection_RequestReceived;
+    connection.ServiceClosed += Connection_ServiceClosed;
+
+    //we open the connection
+    AppServiceConnectionStatus status = await connection.OpenAsync();
+
+    if (status != AppServiceConnectionStatus.Success)
+    {
+        //if the connection fails, we terminate the Win32 process
+        appServiceExit.Set();
+    }
+    else
+    {
+        //if the connection is successful, we communicate to the UWP app that the channel has been established
+        ValueSet initialStatus = new ValueSet();
+        initialStatus.Add("Status", "Ready");
+        await connection.SendMessageAsync(initialStatus);
+    }
+}

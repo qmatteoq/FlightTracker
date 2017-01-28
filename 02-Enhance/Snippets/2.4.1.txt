@@ -1,0 +1,7 @@
+Snippet 2.4.1
+
+DesktopBridge.Helpers bridgeHelpers = new DesktopBridge.Helpers();
+if (bridgeHelpers.IsRunningAsUwp())
+{
+    updateStripMenuItem.Visible = false;
+}

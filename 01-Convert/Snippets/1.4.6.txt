@@ -1,0 +1,3 @@
+Snippet 1.4.6
+
+signtool.exe sign -f "FlighTracker.pfx" -fd SHA256 -v ".\FlightTracker.appx"

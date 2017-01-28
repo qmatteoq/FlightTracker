@@ -1,0 +1,11 @@
+Snippet 4.7.8
+
+//we check if the app is running on the desktop: only if that's the case, we leverage the Desktop Bridge specific features
+if (AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Desktop")
+{
+    //we launch the Win32 process that generates the boarding pass on the desktop
+    await FullTrustProcessLauncher.LaunchFullTrustProcessForCurrentAppAsync();
+
+    //we display the export button if the app is running on the desktop, since it's the only Windows 10 platform which supports running Win32 applications
+    exportButton.Visibility = Visibility.Visible;
+}

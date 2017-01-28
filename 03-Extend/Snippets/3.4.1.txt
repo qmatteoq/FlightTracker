@@ -1,0 +1,4 @@
+Snippet 3.4.1
+
+xcopy /y /s "$(TargetDir)DesktopBridge.FlightTracker.Notification.pri" "$(SolutionDir)DesktopBridge.FlightTracker.Package\PackageFiles"
+xcopy /y /s "$(TargetDir)DesktopBridge.FlightTracker.Notification.winmd" "$(SolutionDir)DesktopBridge.FlightTracker.Package\PackageFiles"

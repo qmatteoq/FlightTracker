@@ -1,0 +1,3 @@
+Snippet 1.4.5
+
+makeappx pack -d ".\PackageFiles" -p "FlightTracker.appx" -l
