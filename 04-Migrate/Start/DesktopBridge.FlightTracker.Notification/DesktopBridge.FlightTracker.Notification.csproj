@@ -163,8 +163,8 @@
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /y /s "$(TargetDir)DesktopBridge.FlightTracker.Notification.pri" "$(SolutionDir)DesktopBridge.FlightTracker.Package\PackageFiles"
-xcopy /y /s "$(TargetDir)DesktopBridge.FlightTracker.Notification.winmd" "$(SolutionDir)DesktopBridge.FlightTracker.Package\PackageFiles"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
