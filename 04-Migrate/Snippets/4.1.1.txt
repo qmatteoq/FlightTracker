@@ -11,7 +11,7 @@ Snippet 4.1.1
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0, 20, 0, 20">
             <Button Content="Save" Click="OnSaveFlight" />
             <Button Content="Export" Click="OnExportBoardingPass" Margin="5, 0, 0, 0" 
-Visibility="Collapsed" />
+Visibility="Collapsed" x:Name="exportButton" />
         </StackPanel>
         <TextBlock x:Name="operationStatusLabel" Style="{StaticResource SubtitleTextBlockStyle}" />
         <ProgressRing Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"

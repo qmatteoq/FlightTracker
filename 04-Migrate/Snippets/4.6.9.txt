@@ -1,0 +1,7 @@
+Snippet 4.6.9
+
+private static void Connection_ServiceClosed(AppServiceConnection sender, AppServiceClosedEventArgs args)
+{
+    //when the connection with the App Service is closed, we terminate the Win32 process
+    appServiceExit.Set();
+} 

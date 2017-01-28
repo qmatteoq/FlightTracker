@@ -1,6 +1,6 @@
 Snippet 3.1.2
 
-public sealed class NotificationTask: IBackgroundTask
+public sealed class ToastTask: IBackgroundTask
 {
     public void Run(IBackgroundTaskInstance taskInstance)
     {

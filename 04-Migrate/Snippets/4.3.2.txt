@@ -1,24 +1,3 @@
 Snippet 4.3.2
 
-protected override void OnNavigatedTo(NavigationEventArgs e)
-{
-    if (ApplicationData.Current.LocalSettings.Values.ContainsKey("Code"))
-    {
-        codeTextbox.Text = ApplicationData.Current.LocalSettings.Values["Code"].ToString();
-    }
-
-    if (ApplicationData.Current.LocalSettings.Values.ContainsKey("Date"))
-    {
-        dateTextbox.Text = ApplicationData.Current.LocalSettings.Values["Date"].ToString();
-    }
-
-    if (ApplicationData.Current.LocalSettings.Values.ContainsKey("Departure"))
-    {
-        departureTextbox.Text = ApplicationData.Current.LocalSettings.Values["Departure"].ToString();
-    }
-
-    if (ApplicationData.Current.LocalSettings.Values.ContainsKey("Arrival"))
-    {
-        arrivalTextbox.Text = ApplicationData.Current.LocalSettings.Values["Arrival"].ToString();
-    }
-}
+using Windows.Storage;
